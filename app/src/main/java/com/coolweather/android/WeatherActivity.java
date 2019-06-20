@@ -33,7 +33,7 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 public class WeatherActivity extends AppCompatActivity {
-
+/*
     public DrawerLayout drawerLayout;
 
     public SwipeRefreshLayout swipeRefresh;
@@ -126,9 +126,7 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * 根据天气id请求城市天气信息。
-     */
+
     public void requestWeather(final String weatherId) {
         String weatherUrl = "http://guolin.tech/api/weather?cityid=" + weatherId + "&key=bc0418b57b2d4918819d3974ac1285d9";
         HttpUtil.sendOkHttpRequest(weatherUrl, new Callback() {
@@ -168,9 +166,7 @@ public class WeatherActivity extends AppCompatActivity {
         loadBingPic();
     }
 
-    /**
-     * 加载必应每日一图
-     */
+
     private void loadBingPic() {
         String requestBingPic = "http://guolin.tech/api/bing_pic";
         HttpUtil.sendOkHttpRequest(requestBingPic, new Callback() {
@@ -195,9 +191,7 @@ public class WeatherActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * 处理并展示Weather实体类中的数据。
-     */
+
     private void showWeatherInfo(Weather weather) {
         String cityName = weather.basic.cityName;
         String updateTime = weather.basic.update.updateTime.split(" ")[1];
@@ -234,5 +228,5 @@ public class WeatherActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AutoUpdateService.class);
         startService(intent);
     }
-
+*/
 }
